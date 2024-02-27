@@ -3,4 +3,5 @@ My name is ZhouyueZhu, and you can also call me Joe.
 I am a enthusiast of photography.
 I am enjoying studying IBI1 in 23-24 semester.
 I am now using vim to editing the introduction file.
+My blog is blog.fantasticjoe.com welcome to visit my blog.
 Nice to meet you and hope you have a nice day!
