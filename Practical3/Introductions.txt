@@ -1,5 +1,6 @@
 Hello. 
-My name is Rob.
-I like drinking tea and eating chocolate biscuits.
-I am enjoying teaching IBI1 in person again 
-I am happy that I can push my repo from Visual Studio Code to GitHub
+My name is ZhouyueZhu, and you can also call me Joe.
+I am a enthusiast of photography.
+I am enjoying studying IBI1 in 23-24 semester.
+I am now using vim to editing the introduction file.
+Nice to meet you!
