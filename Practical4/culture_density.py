@@ -29,6 +29,6 @@ day_counter = 1
 while density < 90: # for loop
     density = 2 * density
     day_counter += 1
-# print(density)  # for test
-# print(day_counter)  # for test
+    # print(density)  # for test
+    # print(day_counter)  # for test
 print("At the day", str(day_counter), "the cell density goes over 90%.")
