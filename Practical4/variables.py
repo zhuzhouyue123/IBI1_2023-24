@@ -22,6 +22,7 @@ abs(a-b) >> d  define the difference between a&b
 abs(b-c) >> e  define the difference between b&c
 compare d&e
 '''
+print("Comparison result:")
 a = 40
 b = 36 # Init the variables
 c = 30
@@ -35,6 +36,8 @@ else:
     print("e is greater, and the second training regime is better.")
 
 # Results: e is greater, and the second training regime is better.                                                             
+
+print("Truth table of the 'either or:'")
 
 # Either or
 # Output truth table
