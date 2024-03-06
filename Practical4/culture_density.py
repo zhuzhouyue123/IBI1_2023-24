@@ -25,10 +25,10 @@ Print out current density & day_counter.
 ''' 
 
 density = 5  # Variables assignment
-day_counter = 0
+day_counter = 1
 while density < 90: # for loop
     density = 2 * density
     day_counter += 1
     # print(density)  # for test
     # print(day_counter)  # for test
-print("At the day", str(day_counter), "the cell density goes over 90%.")
+print("At the day", str(day_counter), "the cell density goes over 90%. So you should come back to the lab at the day", str(day_counter-1), ".")
