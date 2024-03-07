@@ -26,7 +26,7 @@ Print out current density & day_counter.
 
 density = 5  # Variables assignment
 day_counter = 1
-while density < 90: # for loop
+while density < 90: # while loop
     density = 2 * density
     day_counter += 1
     # print(density)  # for test
