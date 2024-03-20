@@ -11,7 +11,6 @@
 
 # here put the import lib
 import matplotlib.pyplot as plt
-import numpy as np
 import seaborn as sns
 import pandas as pd
 
@@ -32,9 +31,11 @@ cities = {  # Create a multi-dimensional dictionary to store the population info
     }
 }
 
+# Create two list to store the population info
 uk_population = list(cities["UK"].values())
 cn_population = list(cities["China"].values())
 
+# Preparation for DataFrame
 data = {
     "Countries": ["UK", "UK", "UK", "UK", "CN", "CN", "CN", "CN"],
     "Population": uk_population + cn_population
@@ -44,6 +45,10 @@ data = {
 df = pd.DataFrame(data)
 # print(df)
 
+# Draw the boxplot
+sns.set_theme(style="darkgrid")
 sns.boxplot(x="Countries", y="Population", data=df)
+plt.title("Boxplot between UK & CN")
 plt.show()
+plt.clf()
 
