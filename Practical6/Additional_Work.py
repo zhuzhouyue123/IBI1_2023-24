@@ -43,7 +43,7 @@ data = {
 # print(data)
 
 df = pd.DataFrame(data)
-# print(df)
+# print(df) for test
 
 # Draw the boxplot
 sns.set_theme(style="darkgrid")
