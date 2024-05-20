@@ -1,1 +1,4 @@
-
+Questions: How has the DALYs changed in the UK over time?
+Lines: 40-47
+Discussion: The program show a plot figure of the DALYs in UK. 
+The figure shows that the DALYs of UK become smaller and at last it became smooth and do not have some differences.
