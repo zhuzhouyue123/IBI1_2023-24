@@ -21,20 +21,22 @@ def read_file(file_path):
             else:
                 seq += line.strip("\n")
         return seq
-    
+
+# use BLOSUM62 to calculate the cores
 def calculate_score(seq1,seq2):
-    blosum62 = MatrixInfo.blosum62
+    blosum62 = MatrixInfo.blosum62  # the matrix only contains a half of info
     score = 0
     for i in range(min(len(seq1),len(seq2))):
         amino = (seq1[i],seq2[i])
         amino_reverse = (seq2[i], seq1[i])
-        if blosum62.get(amino,None) == None:
+        if blosum62.get(amino,None) == None:        # should check both forward and reverse tuple
             current_score = blosum62.get(amino_reverse,None)
         else:
             current_score = blosum62.get(amino, None)
         score += current_score
     return score
 
+# calculate the similarity
 def calculate_similarity(seq1, seq2):
     similarity = 0
     for amino1, amino2 in zip(seq1, seq2):
@@ -42,6 +44,7 @@ def calculate_similarity(seq1, seq2):
             similarity += 1
     return (similarity / len(seq1)) * 100
 
+# main
 if __name__ == "__main__":
     human = read_file("./SLC6A4_HUMAN.fa")
     mouse = read_file("./SLC6A4_MOUSE.fa")
