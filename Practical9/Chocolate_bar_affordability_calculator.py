@@ -17,7 +17,9 @@ def chocolate_counter(money, price):
     changes = money % price
     return count, changes
 
+# init variables
 money = 100
 price = 7
 count, money = chocolate_counter(money, price)
+# print the result
 print(f"You can buy {count} bars and changes are {money}$.")

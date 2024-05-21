@@ -20,8 +20,10 @@ class IBI1_student():
         self.group_project = group_project
         self.exam = exam
     
+    # list all the details
     def details(self):
         print(f"Name: {self.name} Major: {self.major} Portfolio Score: {self.portfolio} Group Project: {self.group_project} Exam Score: {self.exam}")
 
+# main
 student = IBI1_student("Rob", "BMI", 100, 90, 80)
 student.details()

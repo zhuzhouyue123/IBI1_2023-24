@@ -11,7 +11,7 @@
 
 # here put the import lib
 def find_favorite_bond_actor(birth_year):
-    bond_actors = {
+    bond_actors = { # the dict contain the name and the year interval
         "Roger Moore": (1973, 1986),
         "Timothy Dalton": (1987, 1994),
         "Pierce Brosnan": (1995, 2005),
@@ -26,5 +26,6 @@ def find_favorite_bond_actor(birth_year):
     
     return "Unknown"
 
+# main
 favorite_bond_actor = find_favorite_bond_actor(1980)
 print(f"Your favorite James Bond actor is: {favorite_bond_actor}")
