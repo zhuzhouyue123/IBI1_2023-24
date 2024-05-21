@@ -52,7 +52,8 @@ for t in range(num_time_steps):
     for row, col in zip(recovered_rows, recovered_cols):
         population[row, col] = np.random.choice([1,2],1,p=[1-gamma,gamma])[0]
 
-# draw the figure
-plt.figure(figsize=(6, 4), dpi=150)
-plt.imshow(population, cmap='viridis', interpolation='nearest')
-plt.show()
+    # draw the figure
+    plt.figure(figsize=(6, 4), dpi=150)
+    plt.imshow(population, cmap='viridis', interpolation='nearest')
+    plt.title(f"Time {t+1}")
+    plt.show()
