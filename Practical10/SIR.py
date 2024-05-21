@@ -21,6 +21,7 @@ beta = 0.3
 gamma = 0.05
 N = 10000
 
+# init arrays to record changes
 S_array = []
 I_array = []
 R_array = []
@@ -43,7 +44,7 @@ for t in range(1000): # time loop
     I_array.append(I)
     R_array.append(R)
 
-# draw
+# draw the figure
 plt.figure(figsize=(6,4), dpi=150)
 plt.plot(S_array, label="susceptible")
 plt.plot(I_array, label="infected")
