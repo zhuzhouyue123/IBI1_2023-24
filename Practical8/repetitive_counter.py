@@ -20,4 +20,5 @@ count = 0
 for i in range(0,len(seq)):
     if seq[i:i+6] in patterns:
         count += 1
+# print the result
 print(count)
