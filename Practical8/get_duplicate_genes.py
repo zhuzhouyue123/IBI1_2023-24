@@ -14,11 +14,11 @@ import re
 
 def extract_and_write_fasta(fasta_file_path, output_file_path):
     with open(fasta_file_path, 'r') as infile, open(output_file_path, 'w') as outfile:
-        writing = False
+        writing = False # indicate whether the file should be reading
         current_gene = ''
         for line in infile:
-            if line.startswith('>'):
-                if writing:
+            if line.startswith('>'): # when read description line
+                if writing:  # write last seq
                     outfile.write(f">{current_gene}\n{gene_sequence}\n")
                 writing = True
                 current_gene = line[1:].strip().split()[0]
@@ -33,7 +33,7 @@ def extract_and_write_fasta(fasta_file_path, output_file_path):
         if writing:
             outfile.write(f">{current_gene}\n{gene_sequence}\n")
 
-
+# main
 fasta_file_path = 'Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa'
 output_file_path = 'duplicate_genes.fa'
 extract_and_write_fasta(fasta_file_path, output_file_path)

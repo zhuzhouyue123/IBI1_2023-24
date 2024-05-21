@@ -16,6 +16,7 @@ seq = 'ATGCAATCGGTGTGTCTGTTCTGAGAGGGCCTAA'
 patterns = ["GTGTGT", "GTCTGT"]
 count = 0
 
+# find patterns
 for i in range(0,len(seq)):
     if seq[i:i+6] in patterns:
         count += 1
