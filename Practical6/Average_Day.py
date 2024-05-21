@@ -26,7 +26,19 @@ def dict_to_pie(dict):   # define a function that can generate a figure.
     plt.clf() # close the figure
 
 # main
-day = {"Sleeping": 8, "Classes": 6, "Studying": 3.5, "TV": 2, "Music": 1}   # assign the dictionary to store the data
+# variables that can modified
+sleeping = 8
+classes = 6
+studying = 3.5
+tv = 2
+music = 1
+
+day = {"Sleeping": sleeping, "Classes": classes, "Studying": studying, "TV": tv, "Music": music}   # assign the dictionary to store the data
 other = 24 - day["Sleeping"] - day["Classes"] - day["Studying"] - day["TV"] - day["Music"]  # calculate the time of other
 day["Other"] = other  # add a key:value of other time
+# print the dict
+print(day)
+# get activities input, output the time
+key = input(f"What time of activity do you want to know?\nOptions:{"/".join(day.keys())}\n")
+print(f"The time of {key} is {day[key]}h.")
 dict_to_pie(day) # draw the figure
