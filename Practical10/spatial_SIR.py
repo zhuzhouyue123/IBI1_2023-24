@@ -56,4 +56,5 @@ for t in range(num_time_steps):
     plt.figure(figsize=(6, 4), dpi=150)
     plt.imshow(population, cmap='viridis', interpolation='nearest')
     plt.title(f"Time {t+1}")
+    # plt.savefig(f"./spatial_SIR/Time{t+1}.png")
     plt.show()
