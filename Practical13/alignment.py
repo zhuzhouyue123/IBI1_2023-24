@@ -10,6 +10,7 @@
 '''
 
 # here put the import lib
+from Bio.SubsMat import MatrixInfo
 
 def read_file(file_path):
     with open(file_path,"r") as file:
@@ -22,11 +23,17 @@ def read_file(file_path):
         return seq
     
 def calculate_score(seq1,seq2):
-    edit_distance = 0
-    for i in range(len(seq1)):
-        if seq1[i] != seq2[i]:
-            edit_distance += 1
-    return edit_distance
+    blosum62 = MatrixInfo.blosum62
+    score = 0
+    for i in range(min(len(seq1),len(seq2))):
+        amino = (seq1[i],seq2[i])
+        amino_reverse = (seq2[i], seq1[i])
+        if blosum62.get(amino,None) == None:
+            current_score = blosum62.get(amino_reverse,None)
+        else:
+            current_score = blosum62.get(amino, None)
+        score += current_score
+    return score
 
 def calculate_similarity(seq1, seq2):
     similarity = 0
