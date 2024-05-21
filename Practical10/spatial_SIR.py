@@ -27,6 +27,13 @@ initial_infected = np.random.choice(range(100),2)
 population[initial_infected[0],initial_infected[1]] = 1
 
 # stimulation
+# find the position of exist infected point
+# find the position of its 8 neighbors
+# for point in 8 neighbors
+# randomly selected some point to be infected
+# find all infected points
+# randomly selected some point and make them recovered
+
 for t in range(num_time_steps):
     # get the position of the infected
     infected_rows, infected_cols = np.where(population == 1)

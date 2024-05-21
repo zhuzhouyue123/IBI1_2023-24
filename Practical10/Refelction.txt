@@ -1,0 +1,4 @@
+The practical was a little hard. 
+I should construct the model in my brain. 
+The most enjoy thing is to do the simulation and do the data visualization.
+I learnt using np.random.choice, draw the figures.
